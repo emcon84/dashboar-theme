@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaMoneyBill1Wave, FaTable, FaUsers } from "react-icons/fa6";
-import { IoLogoClosedCaptioning, IoMdHome } from "react-icons/io";
+import { IoMdHome } from "react-icons/io";
 import { IoSettingsSharp } from "react-icons/io5";
 import { MdOutlineArrowLeft, MdOutlineArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -43,10 +43,11 @@ export const Sidebar = () => {
       } h-screen px-4 pt-4 transition-width duration-300 overflow-hidden`}
     >
       <div className="flex items-center justify-between">
-        <IoLogoClosedCaptioning
-          size={36}
-          className={`${isOpen ? "block" : "hidden"}`}
-        />
+        <p
+          className={`text-2xl font-bold dark:text-white text-gray-800 ${isOpen ? "block" : "hidden"}`}
+        >
+          My Dashboard
+        </p>
         <button className="top-4 left-4" onClick={handleToggleSidebar}>
           {isOpen ? (
             <MdOutlineArrowLeft size={40} className="text-gray-400" />

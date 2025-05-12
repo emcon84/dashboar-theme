@@ -9,6 +9,7 @@ import { LayoutSidebar } from "./layouts/LayoutSidebar";
 import { LayoutNavbar } from "./layouts/LayoutNavbar";
 import { LayoutSwitcher } from "./components/LayoutSwitcher";
 import { ThemeSwitcher } from "./components/ThemeSwitcher";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="users" element={<Users />} />
           <Route path="advanced-table" element={<AdvancedTable />} />
           <Route path="settings" element={<Settings />} />
+          <Route path="profile" element={<Profile />} />
         </Route>
 
         {/* Layout Navbar */}
@@ -35,6 +37,7 @@ function App() {
           <Route path="users" element={<Users />} />
           <Route path="advanced-table" element={<AdvancedTable />} />
           <Route path="settings" element={<Settings />} />
+          <Route path="profile" element={<Profile />} />
         </Route>
 
         {/* Login route */}
