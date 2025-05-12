@@ -161,7 +161,7 @@ export const AdvancedTable = ({
                     visibleColumns[key] && (
                       <td
                         key={key}
-                        className="py-2 px-4 border-b text-gray-600 dark:text-gray-200"
+                        className="py-2 px-4 border-b border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-200"
                       >
                         {editingId === row.id ? (
                           <input
@@ -181,7 +181,7 @@ export const AdvancedTable = ({
                       </td>
                     )
                 )}
-                <td className="py-2 px-4 border-b space-x-2">
+                <td className="space-x-2 py-2 px-4 border-b border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-200">
                   {editable && editingId === row.id ? (
                     <>
                       <button
