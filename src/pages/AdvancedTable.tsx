@@ -15,42 +15,36 @@ const mockData: DataRow[] = [
     name: "John Doe",
     email: "john@example.com",
     role: "Admin",
-    // pepe: "pepe",
   },
   {
     id: 2,
     name: "Jane Doe",
     email: "jane@example.com",
     role: "User",
-    // pepe: "pepe",
   },
   {
     id: 3,
     name: "Bob Smith",
     email: "bob@example.com",
     role: "Admin",
-    // pepe: "pepe",
   },
   {
     id: 4,
     name: "Alice Johnson",
     email: "alice@example.com",
     role: "User",
-    // pepe: "pepe",
   },
   {
     id: 5,
     name: "Charlie Brown",
     email: "charlie@example.com",
     role: "Admin",
-    // pepe: "pepe",
   },
   {
     id: 6,
     name: "Emily Davis",
     email: "emily@example.com",
     role: "User",
-    // pepe: "pepe",
   },
 ];
 
