@@ -1,15 +1,17 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
-import Sales from "./pages/Sales";
-import Users from "./pages/Users";
-import Settings from "./pages/Settings";
-import Login from "./pages/Login";
-import AdvancedTable from "./pages/AdvancedTable";
-import { LayoutSidebar } from "./layouts/LayoutSidebar";
-import { LayoutNavbar } from "./layouts/LayoutNavbar";
+// import Sales from "./pages/Sales";
+// import Users from "./pages/Users";
 import { LayoutSwitcher } from "./components/LayoutSwitcher";
 import { ThemeSwitcher } from "./components/ThemeSwitcher";
+import { LayoutNavbar } from "./layouts/LayoutNavbar";
+import { LayoutSidebar } from "./layouts/LayoutSidebar";
+import AdvancedTable from "./pages/AdvancedTable";
+import ChartPage from "./pages/ChartPage";
+import Login from "./pages/Login";
 import Profile from "./pages/Profile";
+import Settings from "./pages/Settings";
+import FlexibleChartPage from "./pages/FlexibleChartPage";
 
 function App() {
   return (
@@ -22,8 +24,10 @@ function App() {
         <Route path="/sidebar" element={<LayoutSidebar />}>
           <Route index element={<Navigate to="dashboard" />} />
           <Route path="dashboard" element={<Dashboard />} />
-          <Route path="sales" element={<Sales />} />
-          <Route path="users" element={<Users />} />
+          {/* <Route path="sales" element={<Sales />} />
+          <Route path="users" element={<Users />} /> */}
+          <Route path="line-chart" element={<ChartPage />} />
+          <Route path="flexible-chart" element={<FlexibleChartPage />} />
           <Route path="advanced-table" element={<AdvancedTable />} />
           <Route path="settings" element={<Settings />} />
           <Route path="profile" element={<Profile />} />
@@ -33,8 +37,10 @@ function App() {
         <Route path="/navbar" element={<LayoutNavbar />}>
           <Route index element={<Navigate to="dashboard" />} />
           <Route path="dashboard" element={<Dashboard />} />
-          <Route path="sales" element={<Sales />} />
-          <Route path="users" element={<Users />} />
+          {/* <Route path="sales" element={<Sales />} />
+          <Route path="users" element={<Users />} /> */}
+          <Route path="line-chart" element={<ChartPage />} />
+          <Route path="flexible-chart" element={<FlexibleChartPage />} />
           <Route path="advanced-table" element={<AdvancedTable />} />
           <Route path="settings" element={<Settings />} />
           <Route path="profile" element={<Profile />} />

@@ -1,16 +1,12 @@
-import { useState } from "react";
-import { FaMoneyBill1Wave, FaTable, FaUsers } from "react-icons/fa6";
+import { BiChart } from "react-icons/bi";
+import { FaTable } from "react-icons/fa6";
 import { IoMdHome } from "react-icons/io";
-import { IoSettingsSharp } from "react-icons/io5";
 import { MdOutlineArrowLeft, MdOutlineArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { useSidebar } from "../context/SidebarContext";
 
 export const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(true);
-
-  const handleToggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
+  const { isOpen, toggleSidebar } = useSidebar();
 
   const objectItems = [
     {
@@ -18,29 +14,39 @@ export const Sidebar = () => {
       icon: <IoMdHome size={24} />,
       path: "/sidebar/dashboard",
     },
+    // {
+    //   name: "Sales",
+    //   icon: <FaMoneyBill1Wave size={22} />,
+    //   path: "/sidebar/sales",
+    // },
+    // { name: "Users", icon: <FaUsers size={24} />, path: "/sidebar/users" },
     {
-      name: "Sales",
-      icon: <FaMoneyBill1Wave size={22} />,
-      path: "/sidebar/sales",
+      name: "Line Chart",
+      icon: <BiChart />,
+      path: "/sidebar/line-chart",
     },
-    { name: "Users", icon: <FaUsers size={24} />, path: "/sidebar/users" },
+    {
+      name: "Flexible Chart",
+      icon: <BiChart />,
+      path: "/sidebar/flexible-chart",
+    },
     {
       name: "Advanced Table",
       icon: <FaTable />,
       path: "/sidebar/advanced-table",
     },
-    {
-      name: "Settings",
-      icon: <IoSettingsSharp size={24} />,
-      path: "/sidebar/settings",
-    },
+    // {
+    //   name: "Settings",
+    //   icon: <IoSettingsSharp size={24} />,
+    //   path: "/sidebar/settings",
+    // },
   ];
 
   return (
     <div
       className={`bg-gray-200 dark:bg-gray-900 ${
         isOpen ? "w-[300px]" : "w-[70px]"
-      } h-screen px-4 pt-4 transition-width duration-300 overflow-hidden`}
+      } h-screen fixed top-0 left-0 px-4 pt-4 transition-all duration-300 overflow-hidden z-30`}
     >
       <div className="flex items-center justify-between">
         <p
@@ -48,7 +54,7 @@ export const Sidebar = () => {
         >
           My Dashboard
         </p>
-        <button className="top-4 left-4" onClick={handleToggleSidebar}>
+        <button className="top-4 left-4" onClick={toggleSidebar}>
           {isOpen ? (
             <MdOutlineArrowLeft size={40} className="text-gray-400" />
           ) : (

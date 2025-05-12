@@ -13,7 +13,7 @@ export const LayoutSwitcher = () => {
   };
 
   return (
-    <div className="absolute bottom-20 right-4 shadow-lg hover:transform hover:scale-110 transition-transform duration-300">
+    <div className="fixed bottom-20 right-4 shadow-lg hover:transform hover:scale-110 transition-transform duration-300 z-50">
       <div className="flex items-center justify-between bg-white dark:bg-gray-900 p-4 shadow w-full rounded-lg">
         <button
           onClick={handleSwitch}
