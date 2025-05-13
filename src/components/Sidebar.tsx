@@ -5,7 +5,7 @@ import { MdOutlineArrowLeft, MdOutlineArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useSidebar } from "../context/SidebarContext";
 import { Accordion } from "./Accordion";
-import { FiUser } from "react-icons/fi";
+import { FiLogOut, FiSettings, FiUser } from "react-icons/fi";
 
 export const Sidebar = () => {
   const { isOpen, toggleSidebar } = useSidebar();
@@ -53,16 +53,26 @@ export const Sidebar = () => {
     {
       title: (
         <div className="flex items-center gap-2">
-          <FiUser className="text-xl" />
-          <span className="font-semibold">Emiliano</span>
+          <img
+            src="https://i.pravatar.cc/150?img=3"
+            alt="avatar"
+            className="w-8 h-8 rounded-full shadow"
+          />
+          <span className="font-semibold">User</span>
         </div>
       ),
       content: (
         <div className="space-y-2">
-          <button className="block w-full text-left px-4 py-2 rounded hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-200">
+          <button className="flex items-center w-full text-left px-4 py-2 rounded hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-200">
+            <FiUser className="mr-2" size={16} />
             Perfil
           </button>
-          <button className="block w-full text-left px-4 py-2 rounded hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-200">
+          <button className="flex items-center  w-full text-left px-4 py-2 rounded hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-200">
+            <FiSettings className="mr-2" size={16} />
+            Setting
+          </button>
+          <button className="flex items-center w-full text-left px-4 py-2 rounded hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-200">
+            <FiLogOut className="mr-2" size={16} />
             Cerrar sesión
           </button>
         </div>
