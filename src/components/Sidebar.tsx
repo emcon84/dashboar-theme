@@ -1,4 +1,4 @@
-import { BiChart } from "react-icons/bi";
+import { BiAlignLeft, BiChart, BiPhotoAlbum } from "react-icons/bi";
 import { FaTable } from "react-icons/fa6";
 import { IoMdHome } from "react-icons/io";
 import { MdOutlineArrowLeft, MdOutlineArrowRight } from "react-icons/md";
@@ -29,6 +29,16 @@ export const Sidebar = () => {
       name: "Flexible Chart",
       icon: <BiChart />,
       path: "/sidebar/flexible-chart",
+    },
+    {
+      name: "Toast",
+      icon: <BiPhotoAlbum />,
+      path: "/sidebar/toast",
+    },
+    {
+      name: "Alert",
+      icon: <BiAlignLeft />,
+      path: "/sidebar/alert",
     },
     {
       name: "Advanced Table",

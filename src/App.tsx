@@ -12,6 +12,8 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import FlexibleChartPage from "./pages/FlexibleChartPage";
+import ToastPage from "./pages/ToastPage";
+import AlertPage from "./pages/AlertPage";
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
           <Route path="users" element={<Users />} /> */}
           <Route path="line-chart" element={<ChartPage />} />
           <Route path="flexible-chart" element={<FlexibleChartPage />} />
+          <Route path="toast" element={<ToastPage />} />
+          <Route path="alert" element={<AlertPage />} />
           <Route path="advanced-table" element={<AdvancedTable />} />
           <Route path="settings" element={<Settings />} />
           <Route path="profile" element={<Profile />} />
@@ -41,6 +45,8 @@ function App() {
           <Route path="users" element={<Users />} /> */}
           <Route path="line-chart" element={<ChartPage />} />
           <Route path="flexible-chart" element={<FlexibleChartPage />} />
+          <Route path="toast" element={<ToastPage />} />
+          <Route path="alert" element={<AlertPage />} />
           <Route path="advanced-table" element={<AdvancedTable />} />
           <Route path="settings" element={<Settings />} />
           <Route path="profile" element={<Profile />} />
