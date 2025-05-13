@@ -14,6 +14,7 @@ import Settings from "./pages/Settings";
 import FlexibleChartPage from "./pages/FlexibleChartPage";
 import ToastPage from "./pages/ToastPage";
 import AlertPage from "./pages/AlertPage";
+import AccordionPage from "./pages/AccordionPage";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="flexible-chart" element={<FlexibleChartPage />} />
           <Route path="toast" element={<ToastPage />} />
           <Route path="alert" element={<AlertPage />} />
+          <Route path="accordion" element={<AccordionPage />} />
           <Route path="advanced-table" element={<AdvancedTable />} />
           <Route path="settings" element={<Settings />} />
           <Route path="profile" element={<Profile />} />
@@ -47,6 +49,7 @@ function App() {
           <Route path="flexible-chart" element={<FlexibleChartPage />} />
           <Route path="toast" element={<ToastPage />} />
           <Route path="alert" element={<AlertPage />} />
+          <Route path="accordion" element={<AccordionPage />} />
           <Route path="advanced-table" element={<AdvancedTable />} />
           <Route path="settings" element={<Settings />} />
           <Route path="profile" element={<Profile />} />

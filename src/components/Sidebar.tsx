@@ -1,9 +1,11 @@
-import { BiAlignLeft, BiChart, BiPhotoAlbum } from "react-icons/bi";
+import { BiAlbum, BiAlignLeft, BiChart, BiPhotoAlbum } from "react-icons/bi";
 import { FaTable } from "react-icons/fa6";
 import { IoMdHome } from "react-icons/io";
 import { MdOutlineArrowLeft, MdOutlineArrowRight } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useSidebar } from "../context/SidebarContext";
+import { Accordion } from "./Accordion";
+import { FiUser } from "react-icons/fi";
 
 export const Sidebar = () => {
   const { isOpen, toggleSidebar } = useSidebar();
@@ -14,12 +16,6 @@ export const Sidebar = () => {
       icon: <IoMdHome size={24} />,
       path: "/sidebar/dashboard",
     },
-    // {
-    //   name: "Sales",
-    //   icon: <FaMoneyBill1Wave size={22} />,
-    //   path: "/sidebar/sales",
-    // },
-    // { name: "Users", icon: <FaUsers size={24} />, path: "/sidebar/users" },
     {
       name: "Line Chart",
       icon: <BiChart />,
@@ -41,15 +37,37 @@ export const Sidebar = () => {
       path: "/sidebar/alert",
     },
     {
+      name: "Accordion",
+      icon: <BiAlbum />,
+      path: "/sidebar/accordion",
+    },
+    {
       name: "Advanced Table",
       icon: <FaTable />,
       path: "/sidebar/advanced-table",
     },
-    // {
-    //   name: "Settings",
-    //   icon: <IoSettingsSharp size={24} />,
-    //   path: "/sidebar/settings",
-    // },
+  ];
+
+  // 🧩 Ítem del acordeón de usuario
+  const userAccordionItem = [
+    {
+      title: (
+        <div className="flex items-center gap-2">
+          <FiUser className="text-xl" />
+          <span className="font-semibold">Emiliano</span>
+        </div>
+      ),
+      content: (
+        <div className="space-y-2">
+          <button className="block w-full text-left px-4 py-2 rounded hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-200">
+            Perfil
+          </button>
+          <button className="block w-full text-left px-4 py-2 rounded hover:bg-gray-300 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-200">
+            Cerrar sesión
+          </button>
+        </div>
+      ),
+    },
   ];
 
   return (
@@ -92,6 +110,11 @@ export const Sidebar = () => {
           </li>
         ))}
       </ul>
+
+      {/* Acordeón de usuario */}
+      <div className="mt-6">
+        <Accordion items={userAccordionItem} />
+      </div>
     </div>
   );
 };
